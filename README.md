@@ -17,6 +17,7 @@ The task here is to design a finite state machine to transition from the differe
 
 
 ## How Its Made
+### General Design
 The design chosen for this task is a **five state moore based FSM** as shown below. The **inputs** are:
 
   1) Present state represented by 3 bits
@@ -51,5 +52,5 @@ Below is the final FSM for the design. The inital state is "000" and the EG,NR a
 
 Below is a rough design of the hardware involved for this design. It involves a ROM to go from state to state depending on the inputs and and producing the outputs. There is also a state register to hold the next state values and enabling clock synchronization. The E and L sensors are also synchronized with the clock and fed to the ROM. There is another registor that holds the values of the m, M, and d signals to be loaded into the countdown timer when sel is high.
 
-
 <img width="8150" height="6153" alt="Drawing 3" src="https://github.com/user-attachments/assets/fcca47c3-9235-4779-ac1a-0028dbb98247" />
+### VHDL Implementation
